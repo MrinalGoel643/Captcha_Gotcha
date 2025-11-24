@@ -445,7 +445,7 @@ def main():
         st.markdown("**Example images:**")
         example_choice = st.radio(
             "Select an example",
-            ["Traffic Light","Golden Retriever"],
+            ["Traffic Light","Fire Hydrant","Golden Retriever"],
             label_visibility="collapsed"
         )
     
@@ -460,6 +460,7 @@ def main():
                 # Load example image - support local and URL
                 example_images = {
                     "Traffic Light": "traffic_light.jpg",
+                    "Fire Hydrant": "fire_hydrant.jpg",
                     "Golden Retriever": "golden_dog.jpeg"
                 }
                 
