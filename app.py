@@ -445,7 +445,7 @@ def main():
         st.markdown("**Example images:**")
         example_choice = st.radio(
             "Select an example",
-            ["Golden Retriever"],
+            ["Traffic Light","Golden Retriever"],
             label_visibility="collapsed"
         )
     
@@ -459,6 +459,7 @@ def main():
             elif example_choice != "None":
                 # Load example image - support local and URL
                 example_images = {
+                    "Traffic Light": "traffic_light.jpg",
                     "Golden Retriever": "golden_dog.jpeg"
                 }
                 
@@ -486,7 +487,7 @@ def main():
                 run_analysis = st.button("Run Analysis", type="primary")
                 
                 # Use strong attack by default (hidden from user)
-                epsilon = 7.0  # Strong attack for best results
+                epsilon = 10.0  # Strong attack for best results
                 use_vulnerability = True  # Always use vulnerability guidance
                 
                 # Run analysis
